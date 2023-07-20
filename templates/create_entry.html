@@ -1,0 +1,19 @@
+<!-- create_entry.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create New Entry</title>
+</head>
+
+<body>
+    <h1>Create New Entry</h1>
+    <form method="POST" action="{{ url_for('create_entry') }}">
+        {{ form.csrf_token }}
+        {{ form.field1.label }}: {{ form.field1 }}<br>
+        {{ form.field2.label }}: {{ form.field2 }}<br>
+        {{ form.submit }}
+    </form>
+</body>
+
+</html>
